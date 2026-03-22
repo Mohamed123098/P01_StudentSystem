@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P02_SalesDatabase.Models
+{
+    internal class Sale
+    {
+        [Key]
+        public int SaleId { get; set; }
+        public DateOnly Date { get; set; } =new();
+        [ForeignKey(nameof(Customer))]
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
+        [ForeignKey(nameof(Store))]
+        public int StoreId { get; set; }
+        public Store Store { get; set; }
+
+        [ForeignKey(nameof(Product))]
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
+    }
+}
