@@ -14,7 +14,12 @@ namespace P02_SalesDatabase.Models
         public string Name { get; set; }
         public double Price { get; set; }
         public int Quantity { get; set; }
+        public string Description { get; set; } = "No Description";
         public List<Sale> Sales { get; set; } = [];
 
+        public override string ToString()
+        {
+            return $"Name : {Name}\nPrice: {Price}\nQuantity : {Quantity}\nDescription : {Description}\n===================================";
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace P02_SalesDatabase.Configurations
             builder.HasOne(s => s.Product).WithMany(p => p.Sales).HasForeignKey(s => s.ProductId);
             builder.HasOne(s => s.Store).WithMany(p => p.Sales).HasForeignKey(s => s.StoreId);
             builder.HasOne(s => s.Customer).WithMany(p => p.Sales).HasForeignKey(s => s.CustomerId);
-
+            builder.Property(s => s.Date).HasDefaultValueSql("GETDATE()");
         }
     }
 }

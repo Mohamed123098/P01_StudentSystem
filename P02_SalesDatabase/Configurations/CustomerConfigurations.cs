@@ -13,7 +13,7 @@ namespace P02_SalesDatabase.Configurations
     {
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
-            builder.HasKey(c => c.CustomerId);
+            //builder.HasKey(c => c.CustomerId);
             builder.Property(c => c.Email).HasColumnType("varchar(50)");
 
         }

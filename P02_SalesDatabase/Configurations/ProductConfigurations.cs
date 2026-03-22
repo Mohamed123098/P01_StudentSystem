@@ -13,9 +13,9 @@ namespace P02_SalesDatabase.Configurations
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.HasKey(p => p.ProductId);
+            //builder.HasKey(p => p.ProductId);
             builder.Property(p => p.Name).HasMaxLength(50).IsUnicode(true);
-            builder.Property(p => p.Quantity).HasColumnType("number");
+            //builder.Property(p => p.Quantity).HasColumnType("int");
         }
     }
 }

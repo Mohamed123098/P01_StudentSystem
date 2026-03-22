@@ -16,5 +16,9 @@ namespace P02_SalesDatabase.Models
         public string CreditCardNumber { get; set; }
 
         public List<Sale> Sales { get; set; } = [];
+        public override string ToString()
+        {
+            return $"Name : {Name}\nEmail : {Email}\nCreditCardNumber : {CreditCardNumber}\n--------------------------------";
+        }
     }
 }
